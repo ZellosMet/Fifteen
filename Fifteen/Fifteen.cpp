@@ -1,24 +1,24 @@
-#include<iostream>
+п»ї#include<iostream>
 #include<conio.h>
 #include<time.h>
 using namespace std;
 
 const int SIZE = 4;
 
-#define MOVE_LEFT 75  //Задание переменных для отлова с клавиатуры
+#define MOVE_LEFT 75  //Р—Р°РґР°РЅРёРµ РїРµСЂРµРјРµРЅРЅС‹С… РґР»СЏ РѕС‚Р»РѕРІР° СЃ РєР»Р°РІРёР°С‚СѓСЂС‹
 #define MOVE_RIGHT 77
 #define MOVE_UP 72
 #define MOVE_DOWN 80
 #define ESC 27
 
-void Fill_Grid(int grid[SIZE][SIZE], int SIZE); //Функция заполнения сетки
-void Print_Grid(int grid[SIZE][SIZE], int SIZE); // Функция вывода сетки
-void Move_Up(int grid[SIZE][SIZE], int SIZE, int *pemp_i, int* pemp_j); //Функции перемещения пустого блока
+void Fill_Grid(int grid[SIZE][SIZE], int SIZE); //Р¤СѓРЅРєС†РёСЏ Р·Р°РїРѕР»РЅРµРЅРёСЏ СЃРµС‚РєРё
+void Print_Grid(int grid[SIZE][SIZE], int SIZE); // Р¤СѓРЅРєС†РёСЏ РІС‹РІРѕРґР° СЃРµС‚РєРё
+void Move_Up(int grid[SIZE][SIZE], int SIZE, int *pemp_i, int* pemp_j); //Р¤СѓРЅРєС†РёРё РїРµСЂРµРјРµС‰РµРЅРёСЏ РїСѓСЃС‚РѕРіРѕ Р±Р»РѕРєР°
 void Move_Down(int grid[SIZE][SIZE], int SIZE, int *pemp_i, int* pemp_j);
 void Move_Right(int grid[SIZE][SIZE], int SIZE, int *pemp_i, int* pemp_j);
 void Move_Left(int grid[SIZE][SIZE], int SIZE, int *pemp_i, int* pemp_j);
-void Mix_Grid(int grid[SIZE][SIZE], int arr_move[SIZE], int SIZE, int* pemp_i, int *pemp_j); //Функция перемешивания сеетки
-int Check_Win(int grid[SIZE][SIZE], int SIZE, int control); //Функция проерки сетки на попеду
+void Mix_Grid(int grid[SIZE][SIZE], int arr_move[SIZE], int SIZE, int* pemp_i, int *pemp_j); //Р¤СѓРЅРєС†РёСЏ РїРµСЂРµРјРµС€РёРІР°РЅРёСЏ СЃРµРµС‚РєРё
+int Check_Win(int grid[SIZE][SIZE], int SIZE, int control); //Р¤СѓРЅРєС†РёСЏ РїСЂРѕРµСЂРєРё СЃРµС‚РєРё РЅР° РїРѕРїРµРґСѓ
 
 void main()
 {
@@ -37,10 +37,10 @@ void main()
 	Fill_Grid(grid, SIZE);
 	Mix_Grid(grid, arr_move, SIZE, pemp_i, pemp_j);
 	Print_Grid(grid, SIZE);
-	cout << "\nПравила: Необходимао расположить числа в порядке возрастания начиная с верхнего левого угла.";
-	cout << "\nПеремещение числе осуществляется перемещением пустого квадрата стрелочками.";	
+	cout << "\nРџСЂР°РІРёР»Р°: РќРµРѕР±С…РѕРґРёРјР°Рѕ СЂР°СЃРїРѕР»РѕР¶РёС‚СЊ С‡РёСЃР»Р° РІ РїРѕСЂСЏРґРєРµ РІРѕР·СЂР°СЃС‚Р°РЅРёСЏ РЅР°С‡РёРЅР°СЏ СЃ РІРµСЂС…РЅРµРіРѕ Р»РµРІРѕРіРѕ СѓРіР»Р°.";
+	cout << "\nРџРµСЂРµРјРµС‰РµРЅРёРµ С‡РёСЃР»Рµ РѕСЃСѓС‰РµСЃС‚РІР»СЏРµС‚СЃСЏ РїРµСЂРµРјРµС‰РµРЅРёРµРј РїСѓСЃС‚РѕРіРѕ РєРІР°РґСЂР°С‚Р° СЃС‚СЂРµР»РѕС‡РєР°РјРё.";	
 
-	do //Цикл отлова событий
+	do //Р¦РёРєР» РѕС‚Р»РѕРІР° СЃРѕР±С‹С‚РёР№
 	{
 		control = _getch();
 		switch (control)
@@ -151,6 +151,6 @@ int Check_Win(int grid[SIZE][SIZE], int SIZE, int control)
 			else return 0;
 		}
 	}
-	cout << "\n\t Победа!\n"; 
+	cout << "\n\t РџРѕР±РµРґР°!\n"; 
 	return control = ESC;
 }
