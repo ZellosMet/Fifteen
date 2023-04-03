@@ -17,7 +17,7 @@ void Move_Up(int grid[SIZE][SIZE], int SIZE, int *pemp_i, int* pemp_j); //Фун
 void Move_Down(int grid[SIZE][SIZE], int SIZE, int *pemp_i, int* pemp_j);
 void Move_Right(int grid[SIZE][SIZE], int SIZE, int *pemp_i, int* pemp_j);
 void Move_Left(int grid[SIZE][SIZE], int SIZE, int *pemp_i, int* pemp_j);
-void Mix_Grid(int grid[SIZE][SIZE], int arr_move[SIZE], int SIZE, int* pemp_i, int *pemp_j); //Функция перемешивания сеетки
+void Mix_Grid(int grid[SIZE][SIZE], int arr_move[SIZE], int SIZE, int* pemp_i, int *pemp_j); //Функция перемешивания сетки
 int Check_Win(int grid[SIZE][SIZE], int SIZE, int control); //Функция проерки сетки на попеду
 
 void main()
